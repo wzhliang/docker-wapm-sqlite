@@ -3,5 +3,5 @@ FROM ubuntu:18.04
 RUN apt-get update && \
     apt-get install -y wget curl && \
     wget https://get.wasmer.io  && sh index.html
-RUN wapm install sqlite
-CMD wapm run sqlite
+RUN /root/.wasmer/bin/wapm install sqlite
+CMD /root/.wasmer/bin/wapm run sqlite
